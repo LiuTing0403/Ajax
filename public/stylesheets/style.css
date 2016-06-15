@@ -1,0 +1,141 @@
+body {
+	font: normal 16px Helvetica, Arial, sans-serif;
+	background: #181818;
+	color: #333;
+}
+main {
+	width: 980px;
+	padding: 20px;
+	margin: 0 auto;
+	background: #fff;
+}
+figure {
+	position: relative;
+	width: 100%;
+	margin: 0;
+}
+figure + figure { display: none; }
+#slides a{
+	display: inline-block;
+	margin-top: -20px;
+	width: 48px;
+	height: 80px;
+}
+a.last {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-left: 20px;
+	background: transparent url("../images/icon_pager.png") no-repeat;
+}
+a.next {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	margin-right: 20px;
+	background: transparent url("../images/icon_pager.png") no-repeat;
+	background-position:  -48px 0;
+}
+img {
+	width: 100%;
+	height: 100%;
+}
+figcaption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 15px;
+	color: #fff;
+	background: rgba(0, 0, 0, .7);
+}
+#comments header {
+	position: relative;
+}
+#title {
+	width: 60%;
+	display: inline-block;
+}
+#button {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 20px 0;
+}
+.button {
+	font-size: 16px;
+	border: none;
+	padding: 10px 15px;
+	text-decoration: none;
+	border-radius: 10px;
+	color: #2a8bb8;
+	background: #c5eafa;
+}
+a.likes {
+	
+}
+a.favorites {
+	color: #fff;
+	background: #b70e85;
+}
+ul {
+	list-style: none;
+	padding: 0;
+}
+li {
+	margin-top: 20px;
+	padding-top: 20px;
+}
+li header {
+	overflow: hidden;
+}
+li figure {
+	width: 48px;
+	height: 48px;
+	float: left;
+	margin-right: 20px;
+}
+li figure img {
+	border-radius: 24px;
+}
+li h4 { 
+	padding-top: 10px;
+	margin:0;
+}
+li p { margin-left: 68px; }
+li header p { margin: 0; }
+li + li { border-top: 1px solid #cecece; }
+fieldset {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+dd { 
+	margin-left: 0; 
+	padding-bottom: 15px;
+}
+form input {
+	width: 250px;
+	height: 30px;
+	padding: 5px;
+	font: normal 14px Helvetica, Arial, sans-serif;
+	border-radius: 4px;
+	box-sizing: border-box;
+	border: 1px solid #cecece;
+}
+dt { padding-bottom: 5px; }
+label { 
+	font-size: 14px;
+	font-weight: bold; 
+}
+form textarea {
+	width: 290px;
+	height: 100px;
+	border: 1px solid #cecece;
+	border-radius: 4px;
+	box-sizing: border-box;
+	resize: auto;
+}
+
+
+

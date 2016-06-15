@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>Photo Gallery</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+  <link rel="shortcut icon" href="http://www.google.com/favicon.ico" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script type="text/javascript" src="handlebars-latest.js"></script>
+</head>
+<body>
+  <main>
+  <h1>Amada Rose's Photos</h1>
+  <div id="slides">
+    
+    <script type="text/x-handlebars-template" id="photos_template">
+      {{#each photos}}
+      <figure id="slide_{{id}}" data_id="{{id}}">
+        <img src={{src}}>
+        <a href="#" class="last"></a>
+        <a href="#" class="next"></a>
+        <figcaption>{{caption}}</figcaption>
+      </figure>
+      {{/each}}
+    </script>
+  </div>
+  <div id="comments">
+    <script type="text/x-handlebars-template" id="photoInfo_template">
+      <header>
+        <div id="title">
+          <h2>{{title}}</h2>
+          <p>Taken on <time>{{created_at}}</time></p>
+        </div>
+        <div id="button">
+          <a class="button likes" href="#">♡ {{likes}} Likes</a>
+          <a class="button favorites" href="#">☆ {{favorites}} Favorites</a>
+        </div>
+        <h3>Comments</h3>
+      </header>
+    </script>
+    <ul id="comment_list">
+      <script type="text/x-handlebars-template" id="comment_template">
+        {{#each comments}}
+        <li id="comment_{{photo_id}}">
+          <header>
+            <figure>
+              <img src={{gravatar}}>
+            </figure>
+            
+            <h4>{{name}}</h4>
+            <p><small>Posted on <time>{{date}}</time></small></p>
+          </header>
+            <p>{{body}}</p>
+        </li>
+        {{/each}}
+      </script>
+    </ul>
+  </div>
+  <form action="" method="post" id="post_comment">
+    <fieldset>
+      <h4>Your Comment</h4>
+      <dl>
+        <dt><label for="name">Your Name</label></dt>
+        <dd><input type="text" name="name" id="name"></dd>
+        <dt><label for="email">Email Address</label></dt>
+        <dd><input type="email" name="email" placeholder="you@example.com" id="email"></dd>
+        <dt><label for="comment">Comment</label></dt>
+        <dd><textarea name="body" id="comment_content"></textarea></dd>
+        <dd><input type="hidden" name="photo_id" id="photo_id" value="1"></dd>
+      </dl>
+      <button class="button" type="submit">Post Comment</button>
+    </fieldset>
+  </form>
+  </main>
+  <script type="text/javascript" src="javascripts/gallery.js"></script>
+
+</body>
+</html>
